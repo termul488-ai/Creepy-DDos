@@ -9,7 +9,7 @@ import argparse
 import requests
 import threading
 try:
-    from syncio import Header, options
+    from asyncio import Header, options
 finally:
     config = {}     # Stores de configuration provided by the user
     success = 0     # Count of the amount of packets successfully send
