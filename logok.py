@@ -9,7 +9,6 @@ import threading
 import time
 import argparse
 import arts 
-import header
 
 config = {}     # Stores de configuration provided by the user
 success = 0     # Count of the amount of packets successfully send
