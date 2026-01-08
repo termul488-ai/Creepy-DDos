@@ -11,6 +11,23 @@ import argparse
 try:
     from arts import Header, options
 
+NormalBlack = "\033[38;5;0m  \033[0m"
+NormalRed = "\033[38;5;1m  \033[0m"
+NormalGreen = "\033[38;5;2m  \033[0m"
+NormalYellow = "\033[38;5;3m  \033[0m"
+NormalBlue = "\033[38;5;4m  \033[0m"
+NormalMagenta = "\033[38;5;5m  \033[0m"
+NormalCyan = "\033[38;5;6m  \033[0m"
+NormalWhite =  "\033[38;5;7m  \033[0m"
+BrightBlack = "\033[48;5;0m  \033[0m"
+BrightRed =  "\033[48;5;1m  \033[0m"
+BrightGreen = "\033[48;5;2m  \033[0m"
+BrightYellow = "\033[48;5;3m  \033[0m"
+BrightBlue = "\033[48;5;4m  \033[0m"
+BrightMagenta = "\033[48;5;5m  \033[0m"
+BrightCyan = "\033[48;5;6m  \033[0m"
+BrightWhite = "\033[48;5;7m  \033[0m"
+
 except:
     config = {}     # Stores de configuration provided by the user
     success = 0     # Count of the amount of packets successfully send
