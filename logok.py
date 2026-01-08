@@ -13,7 +13,7 @@ except ImportError:
     print('You must install requests lib\n $ pip install requests')
     
 try:
-    from arts import Header, options
+    from arts import header, options
 
 finally:
     config = {}     # Stores de configuration provided by the user
@@ -152,7 +152,7 @@ def check_input(config):
 
 def main():
     threads_pool = []                        # Stores all active threads
-    Header()                                 # Prints the header
+    header()                                 # Prints the header
     options = get_parser()                   # Get the arguments
     config = check_input(vars(options.parse_args()))
 
