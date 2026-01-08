@@ -1,4 +1,10 @@
-import urllib.request, os, threading, time, random, sys
+import urllib
+import requests 
+import os
+import threading 
+import time 
+import random 
+import sys
 
 class Spammer(threading.Thread):
     
