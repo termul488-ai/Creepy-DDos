@@ -8,7 +8,7 @@ import requests
 import threading
 import time
 import argparse
-from arts 
+import arts 
 import header
 
 config = {}     # Stores de configuration provided by the user
