@@ -33,6 +33,7 @@ class Spammer(threading.Thread):
         global N
         self.Lock.acquire()
         print ("Thread #%4d |"% (self.num))
+        print(f"\033[100m \033[44mLogok.py \033[33mInfo attack \033[32m" +str(url)+ " \033[31mpow\033[0m")
         self.Lock.release()
         time.sleep(1)
         while True:
