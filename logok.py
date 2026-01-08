@@ -12,6 +12,10 @@ import aiohttp
 import jason
 try:
     import requests
+except ImportError:
+    print("Missing deps. Install: pip install requests")
+    sys.exit(1)
+
     
 
 config = {}     # Stores de configuration provided by the user
