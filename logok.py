@@ -11,7 +11,7 @@ try:
     import requests
 except ImportError:
     print('You must install requests lib\n $ pip install requests')
-from arts import Header, options
+    from arts import Header, options
     
 NormalBlack = "\033[38;5;0m  \033[0m"
 NormalRed = "\033[38;5;1m  \033[0m"
@@ -170,37 +170,12 @@ def main():
     options = get_parser()                   # Get the arguments
     config = check_input(vars(options.parse_args()))
 
-def display_header():
-    header_lines = [
-        f"{Fore.GREEN}══════════════════════════════════════════════════════════════════════════",
-        f"{Fore.YELLOW}",
-        f"{Fore.YELLOW} ██████▒▒   ██▒▒                 ██████▒▒ ██▒▒   ██▒▒",
-        f"{Fore.YELLOW} ██▒▒   ██▒▒██▒▒                ██▒▒      ██▒▒  ██▒▒",
-        f"{Fore.YELLOW} ██▒▒   ██▒▒██▒▒                ██▒▒      ██▒▒ ██▒▒",
-        f"{Fore.YELLOW} ██▒▒   ██▒▒██▒▒        {Fore.RED}█▒▒     {Fore.YELLOW}██▒▒      ██▒▒██▒▒",
-        f"{Fore.YELLOW} █████▒▒    ██▒▒       {Fore.RED}███▒▒    {Fore.YELLOW}██▒▒      ██▒██▒▒",
-        f"{Fore.YELLOW} ██▒▒   ██▒▒██▒▒      {Fore.RED}██▒██▒▒   {Fore.YELLOW}██▒▒      ██▒▒██▒▒ ",
-        f"{Fore.YELLOW} ██▒▒   ██▒▒██▒▒     {Fore.RED}██▒▒ ██▒▒  {Fore.YELLOW}██▒▒      ██▒▒ ██▒▒",
-        f"{Fore.YELLOW} ██████▒▒   ██████▒▒{Fore.RED}██▒▒   ██▒▒  {Fore.YELLOW}██████▒▒ ██▒▒   ██▒▒",
-        f"{Fore.RED}                   {Fore.RED}██▒▒     ██▒▒    {Fore.GREEN}███████▒▒  ████▒▒     ████▒██▒▒       ██▒▒",
-        f"{Fore.RED}                  {Fore.RED}████████▒▒ ██▒▒   {Fore.GREEN}██▒▒   ██▒▒██▒██▒▒   ██▒██▒▒██▒▒     ██▒▒",
-        f"{Fore.RED}                 {Fore.RED}██▒▒         ██▒▒  {Fore.GREEN}██▒▒   ██▒▒██▒▒██▒▒ ██▒▒██▒▒ ██▒▒   ██▒▒",
-        f"{Fore.RED}                {Fore.RED}██▒▒           ██▒▒ {Fore.GREEN}██▒▒   ██▒▒██▒▒ ██▒██▒▒ ██▒▒  ██▒▒ ██▒▒",
-        f"{Fore.GREEN}               {Fore.RED}██▒▒             ██▒▒{Fore.GREEN}██▒▒   ██▒▒██▒▒  ███▒▒  ██▒▒   ██▒██▒▒",
-        f"{Fore.GREEN}                                    ██████▒▒   ██▒▒   ██▒▒  ██▒▒    ███▒▒",
-        f"{Fore.GREEN}                                    ██▒▒ ██▒▒  ██▒▒         ██▒▒     ██▒▒",
-        f"{Fore.GREEN}                                    ██▒▒   ██▒▒██▒▒         ██▒▒     ██▒▒",
-        f"{Fore.GREEN}",
-        f"{Fore.GREEN} ",    
-        f"{Fore.RED}    █████▒▒  ███▒▒   ██▒▒   ██▒▒ █▒▒  █▒▒ ██▒▒ █▒▒ █▒▒███████▒▒ █▒▒   █▒▒",
-        f"{Fore.RED}   █▒▒      █▒▒  █▒▒ █▒█▒▒ █▒█▒▒ █▒▒  █▒▒ █▒█▒▒█▒▒ █▒▒   █▒▒     █▒▒ █▒▒",
-        f"{Fore.WHITE}   █▒▒      █▒▒  █▒▒ █▒▒█▒█▒▒█▒▒ █▒▒  █▒▒ █▒▒█▒█▒▒ █▒▒   █▒▒      ██▒▒",
-        f"{Fore.WHITE}    ████▒▒   ███▒▒   █▒▒██▒▒ █▒▒  ███▒▒   █▒▒ ██▒▒ █▒▒   █▒▒       █▒▒",
-        f"{Fore.WHITE}",      
-        f"{Fore.YELLOW}════════════════════════════════════════════════════════════════════════════",
-    ]
-    for line in header_lines:
-        print(line)
+os.system('clear')
+print("""
+══════════════════════════════════════════════════════════════════════════",
+       ██
+═══════════════════════════════════════════════════════════════════════════",
+""")
 
     # PRINT INFO BANNER
     status = check_address(config["url"])
