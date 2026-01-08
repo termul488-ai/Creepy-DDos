@@ -9,6 +9,7 @@ import argparse
 import requests
 import threading
 import asyncio
+import aiohttp
 import jason
 
 config = {}     # Stores de configuration provided by the user
