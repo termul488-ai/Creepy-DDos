@@ -179,7 +179,7 @@ def main():
     while threading.active_count() > 0:
         now = round(time.time() -starting_time, 1 )
         try:
-            print("\r[>] Number of hits: {0}       |   Time: {1}".format(success, now), end."\r")
+            print("\r[>] Number of hits: {0}       |   Time: {1}".format(success, now), end="\r")
         except KeyboardInterrupt:
             checker.on = False
             for th in threads_pool:
