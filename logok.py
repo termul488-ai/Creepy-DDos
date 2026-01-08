@@ -1,16 +1,16 @@
 #!/usr/bin/env python
 # -*- encoding: UTF-8 -*-
-
+import os
+import sys
 import random
 import re
-try:
-    import requests
+import requests
 except ImportError:
-    print('You must install requests lib\n $ pip install requests')
 import threading
 import time
 import argparse
-from arts import header, options
+from arts 
+import header
 
 config = {}     # Stores de configuration provided by the user
 success = 0     # Count of the amount of packets successfully send
