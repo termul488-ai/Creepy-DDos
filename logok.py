@@ -51,10 +51,10 @@ class MainLoop():
             os.system('title       ........:::::   B4ckself DoS V4.1   :::::........        Python 3.3.3')
             os.system('color a')
             color = ['a', 'b', 'c', 'd', 'e', 'f']
-            os.system('color %s' % (color[random.randrange(0, 5, 1)]))
-        print ('\n                     ###################################\n')
-        print ('                 01010o.....::B4ckself DoS V4.1::.....o01010\n')
-        print ('              #################################################')
+            os.system('clear')
+        print ('\n                     ###############')
+        print ('                 01010o')
+        print ('              ########################')
         print ('\n\t  A DoS Concept for HTTP site, Coded by B4ckdoor\n')
         print ('\t                ProxyHandling by Sikh887             \n\n')
     
