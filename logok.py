@@ -148,9 +148,8 @@ def check_input(config):
 
 def main():
     threads_pool = []                        # Stores all active threads
-    Header()                                 # Prints the header
-         options = get_parser()              # Get the arguments
-         config = check_input(vars(options.parse_args()))
+    options = get_parser()                   # Get the arguments
+    config = check_input(vars(options.parse_args()))
 
     # PRINT INFO BANNER
     status = check_address(config["url"])
