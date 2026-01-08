@@ -1,25 +1,21 @@
 #!/usr/bin/env python
 # -*- encoding: UTF-8 -*-
-import os
-import sys
-import time
+
 import random
-import threading
-import argparse
 import re
 try:
     import requests
 except ImportError:
     print('You must install requests lib\n $ pip install requests')
-    
-try:
-    from arts import header, options
+import threading
+import time
+import argparse
+from arts import header, options
 
-finally:
-    config = {}     # Stores de configuration provided by the user
-    success = 0     # Count of the amount of packets successfully send
-    stop = False    # If True stop all threads
-    user_agents = [
+config = {}     # Stores de configuration provided by the user
+success = 0     # Count of the amount of packets successfully send
+stop = False    # If True stop all threads
+user_agents = [
     "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; .NET CLR 2.0.50727; .NET CLR 3.0.04506.30)",
     "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.1.4322)",
     "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:53.0) Gecko/20100101 Firefox/53.0",
@@ -152,7 +148,7 @@ def check_input(config):
 
 def main():
     threads_pool = []                        # Stores all active threads
-    header()                                 # Prints the header
+    Header()                                 # Prints the header
     options = get_parser()                   # Get the arguments
     config = check_input(vars(options.parse_args()))
 
