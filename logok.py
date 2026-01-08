@@ -2,13 +2,14 @@
 # -*- encoding: UTF-8 -*-
 import os
 import sys
+import time
 import random
 import re
+import argparse
 import requests
 import threading
-import time
-import argparse
-import arts 
+try:
+    from syncio import Header, options
 
 config = {}     # Stores de configuration provided by the user
 success = 0     # Count of the amount of packets successfully send
@@ -146,6 +147,7 @@ def check_input(config):
 
 def main():
     threads_pool = []                        # Stores all active threads
+    Header()                                 # Prints the header
     options = get_parser()                   # Get the arguments
     config = check_input(vars(options.parse_args()))
 
@@ -187,3 +189,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+            
