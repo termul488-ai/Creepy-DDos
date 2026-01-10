@@ -49,7 +49,7 @@ def randomip():
   randip = str(randip[0]) + "." + str(randip[1]) + "." + str(randip[2]) + "." + str(randip[3])
   return(randip)
 
-print("[>>>] Starting the attack [<<<]")
+print("\033[33mSyarting the attack \033[32m" +str(url)+ "\033[91m 0verload")
 
 
 time.sleep(1)
