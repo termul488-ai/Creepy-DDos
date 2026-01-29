@@ -26,6 +26,7 @@ BrightWhite = "\033[48;5;7m  \033[0m"
 attemps = 0
 os.system('clear')
 print("""
+\033[38;5;220m
 """)
 
 
@@ -68,7 +69,7 @@ def attack():
       #star here
       for y in range(100):
           atk.send(str.encode(request))
-          print(f"\r\033[38;5;220m" +str(request)+"")
+          print(f"\r" +str(request)+"")
     except socket.error:
       time.sleep(.1)
     except:
